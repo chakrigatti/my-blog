@@ -100,3 +100,22 @@ header h1 {
 .post-card p {
     margin-top: 0.5rem;
 }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333; /* Or any color that matches your theme */
+    z-index: 10; /* To ensure it stays on top */
+}
+
+.navbar a:link, 
+.navbar a:visited {
+    color: #FFFFFF; /* Or whatever color you prefer */
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: #FFD700; /* Optional: hover and active color */
+    text-decoration: none;
+}
