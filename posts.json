@@ -1,0 +1,18 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Getting Started with JavaScript",
+            "date": "2024-03-15",
+            "tags": ["javascript", "web"],
+            "contentPath": "posts/post1.html"
+        },
+        {
+            "id": 2,
+            "title": "CSS Best Practices",
+            "date": "2024-03-14",
+            "tags": ["css", "web"],
+            "contentPath": "posts/post2.html"
+        }
+    ]
+}
