@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog - All Posts</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link" data-link>Home</a>
+            <a href="posts.html" class="nav-link" data-link>All Posts</a>
+            <a href="about.html" class="nav-link" data-link>About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content-layout">
+            <div id="posts-list-container" class="posts-list">
+                <!-- Posts will be inserted here -->
+            </div>
+
+            <div class="sidebar">
+                <h3>Filter by Tags</h3>
+                <div id="all-tags" class="tags">
+                    <!-- Tags will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <template id="post-template">
+        <div class="post-preview">
+            <h2><a href="" data-link></a></h2>
+            <div class="post-meta">
+                <span class="date"></span>
+                <span class="tags"></span>
+            </div>
+            <p></p>
+        </div>
+    </template>
+</body>
+</html>

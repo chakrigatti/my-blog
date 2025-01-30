@@ -98,3 +98,44 @@ nav a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Add to existing styles */
+.post-preview {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.post-preview:hover {
+    transform: translateY(-2px);
+}
+
+.post-full {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.post-full .post-content {
+    margin-top: 1.5rem;
+    line-height: 1.6;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: #666;
+}
+
+.post-meta {
+    margin: 1rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}

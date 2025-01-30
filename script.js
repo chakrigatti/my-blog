@@ -1,48 +1,14 @@
-// Sample blog posts data
 let posts = [];
 
-// Navigation handling
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const sectionId = link.getAttribute('href').substring(1);
-        showSection(sectionId);
-        window.location.hash = sectionId;
-    });
-});
-
-function showSection(sectionId) {
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
+async function init() {
+    await loadPosts();
 }
-
-// Handle initial hash
-function handleHash() {
-    const hash = window.location.hash.substring(1) || 'home';
-    showSection(hash);
-}
-
-window.addEventListener('load', () => {
-    handleHash();
-    loadPosts(); // Changed from direct renderPosts() call
-});
-window.addEventListener('hashchange', handleHash);
 
 async function loadPosts() {
     try {
-        // Load post metadata
         const response = await fetch('posts.json');
         const data = await response.json();
-        
-        // Load content for each post
-        posts = await Promise.all(data.posts.map(async post => {
-            const contentResponse = await fetch(post.contentPath);
-            post.content = await contentResponse.text();
-            return post;
-        }));
-        
+        posts = data.posts;
         renderPosts();
         renderTags();
     } catch (error) {
@@ -50,48 +16,52 @@ async function loadPosts() {
     }
 }
 
-// Update renderPosts function
 function renderPosts(filterTag = null) {
-    const postsContainer = document.getElementById('posts-container');
-    postsContainer.innerHTML = '';
+    const postsContainer = document.getElementById('posts-list-container');
+    if (!postsContainer) return;
 
-    const filteredPosts = filterTag 
-        ? posts.filter(post => post.tags.includes(filterTag))
-        : posts;
+    const filteredPosts = filterTag ? posts.filter(post => post.tags.includes(filterTag)) : posts;
+
+    postsContainer.innerHTML = '';
+    const template = document.getElementById('post-template');
 
     filteredPosts.forEach(post => {
-        const postEl = document.createElement('div');
-        postEl.className = 'post';
-        postEl.innerHTML = `
-            ${post.content}
-            <div class="tags">
-                ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-            </div>
-        `;
-        postsContainer.appendChild(postEl);
-    });
-}
+        const clone = template.content.cloneNode(true);
+        clone.querySelector('a').href = `posts/${post.slug}`;
+        clone.querySelector('a').textContent = post.title;
+        clone.querySelector('.date').textContent = post.date;
+        clone.querySelector('p').textContent = post.excerpt;
 
-// Render tags
-function renderTags() {
-    const tagsContainer = document.getElementById('tags-container');
-    const allTags = [...new Set(posts.flatMap(post => post.tags))];
-    
-    tagsContainer.innerHTML = `
-        <span class="tag" data-filter="all">All</span>
-        ${allTags.map(tag => `
-            <span class="tag" data-filter="${tag}">${tag}</span>
-        `).join('')}
-    `;
-
-    tagsContainer.querySelectorAll('.tag').forEach(tag => {
-        tag.addEventListener('click', () => {
-            const filter = tag.dataset.filter;
-            renderPosts(filter === 'all' ? null : filter);
+        const tagsContainer = clone.querySelector('.tags');
+        tagsContainer.innerHTML = '';
+        post.tags.forEach(tag => {
+            const tagSpan = document.createElement('span');
+            tagSpan.className = 'tag';
+            tagSpan.textContent = tag;
+            tagSpan.setAttribute('data-tag', tag);
+            tagsContainer.appendChild(tagSpan);
         });
+
+        postsContainer.appendChild(clone);
     });
 }
 
-// Initial render
-renderPosts();
-renderTags();
+function renderTags() {
+    const tagsContainer = document.getElementById('all-tags');
+    if (!tagsContainer) return;
+
+    const allTags = [...new Set(posts.flatMap(post => post.tags))];
+
+    tagsContainer.innerHTML = '';
+    allTags.forEach(tag => {
+        const tagSpan = document.createElement('span');
+        tagSpan.className = 'tag';
+        tagSpan.textContent = tag;
+        tagSpan.setAttribute('data-tag', tag);
+        tagSpan.addEventListener('click', () => renderPosts(tag));
+        tagsContainer.appendChild(tagSpan);
+    });
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', init);
