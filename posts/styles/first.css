@@ -1,18 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
 .blog-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 850px;
 
     nav{
         display: flex;
-        padding: 20px;
+        padding: 20px 0px 20px 0px;
+        align-self: self-start;
     }
 
 }
 
 
 .blog-post{
-    width: 850px;
+    
     text-align: justify;
 
     h1{
