@@ -1,0 +1,28 @@
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    nav{
+        display: flex;
+        padding: 20px;
+    }
+
+}
+
+
+.blog-post{
+    width: 850px;
+    text-align: justify;
+
+    h1{
+        display: flex;
+        justify-content: center;
+    }
+
+    p{
+        font-size: large;
+        line-height: 40px;
+    }
+}
+

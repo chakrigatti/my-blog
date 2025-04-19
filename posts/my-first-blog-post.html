@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Blog Post Title</title>
+    <link rel="stylesheet" href="./styles/first.css">
 </head>
 <body>
-    <button onclick="window.location.href='../index.html'">Back to Home</button>
-
-    <h1>First Blog Post Title</h1>
-    <p>This is the content of my first blog post. You can write anything you want here. Explain your thoughts, share your experiences, or discuss interesting topics.</p>
-    <p>Feel free to add more paragraphs, images, or any other HTML elements to make your blog post engaging.</p>
+    <div class="blog-container">
+        <nav>
+            <button onclick="window.location.href='../index.html'">Back to Home</button>
+        </nav>
+        
+        <main class="blog-post">
+            <h1>First Blog Post Title</h1>
+            <article>
+                <p>
+                    This is the content of my first blog post. 
+                    You can write anything you want here. 
+                    Explain your thoughts, share your experiences, or discuss interesting topics.
+                </p>
+                <p>Feel free to add more paragraphs, images,
+                    or any other HTML elements to make your blog post engaging.
+                </p>
+            </article>
+        </main>
+    </div>
+    
 </body>
 </html>
