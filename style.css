@@ -5,6 +5,9 @@ li{
 a{
     text-decoration: none;
 }
+body{
+    background-color: hsl(0, 15%, 95%);
+}
 
 .blog-list{
     line-height: 30px;
