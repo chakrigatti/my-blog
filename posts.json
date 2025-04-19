@@ -1,18 +1,22 @@
 {
     "posts": [
         {
-            "slug": "getting-started-with-javascript.html",
-            "title": "Getting Started with JavaScript",
-            "date": "2024-03-15",
-            "tags": ["javascript", "web"],
-            "excerpt": "Learn the fundamentals of JavaScript programming..."
+            "slug": "my-first-blog-post.html",
+            "title": "My First Blog Post",
+            "date": "2025-04-19",
+            "tags": ["javascript", "web"]
         },
         {
-            "slug": "css-best-practices.html",
-            "title": "CSS Best Practices",
-            "date": "2024-03-14",
-            "tags": ["css", "web"],
-            "excerpt": "Discover modern CSS techniques and best practices..."
+            "slug": "my-first-blog-post.html",
+            "title": "My First Blog Post",
+            "date": "2025-04-19",
+            "tags": ["javascript", "web"]
+        },
+        {
+            "slug": "my-first-blog-post.html",
+            "title": "My First Blog Post",
+            "date": "2025-04-19",
+            "tags": ["javascript", "web"]
         }
     ]
 }

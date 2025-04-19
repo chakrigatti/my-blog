@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog - Home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js" type="module"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="posts.html" class="nav-link">All Posts</a>
-            <a href="about.html" class="nav-link">About</a>
-        </nav>
-    </header>
+    <h1>Welcome to My Blog!</h1>
 
-    <div class="container">
-        <section class="home-section">
-            <div class="post">
-                <h1>Welcome to My Blog</h1>
-                <p>Discover interesting articles about web development, programming, and technology.</p>
-            </div>
-        </section>
+    <div class="blog-links">
+        <h2>Recent Posts</h2>
+        <ul class="blog-list">
+            
+        </ul>
     </div>
+
+    <template id="blog-li">
+        <li class="blog-item">
+            <a class="blog-link">
+                <h3 class="blog-title"></h3>
+                <p class="blog-excerpt"></p>
+                <span class="blog-date"></span>
+            </a>
+        </li>
+    </template>
 </body>
 </html>
