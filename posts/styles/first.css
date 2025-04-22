@@ -24,6 +24,9 @@ body{
 .blog-post{
     
     text-align: justify;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
 
     h1{
         display: flex;

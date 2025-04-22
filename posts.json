@@ -3,20 +3,8 @@
         {
             "slug": "my-first-blog-post.html",
             "title": "My First Blog Post",
-            "date": "2025-04-19",
-            "tags": ["javascript", "web"]
-        },
-        {
-            "slug": "my-first-blog-post.html",
-            "title": "My First Blog Post",
-            "date": "2025-04-19",
-            "tags": ["javascript", "web"]
-        },
-        {
-            "slug": "my-first-blog-post.html",
-            "title": "My First Blog Post",
-            "date": "2025-04-19",
-            "tags": ["javascript", "web"]
+            "date": "2025-04-22",
+            "tags": ["personal"]
         }
     ]
 }
