@@ -6,7 +6,13 @@ a{
     text-decoration: none;
 }
 body{
-    background-color: hsl(0, 15%, 95%);
+    /* background-color: hsl(0, 15%, 95%); */
+}
+
+body{
+    background: linear-gradient(#e0e0e0 1px, transparent 1px),
+                linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+    background-size: 35px 35px;
 }
 
 .blog-list{

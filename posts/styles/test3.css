@@ -1,0 +1,60 @@
+body{
+    background: linear-gradient(#e0e0e0 1px, transparent 1px),
+                linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+    background-size: 35px 35px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    /* background-color: hsl(0, 15%, 95%); */
+    line-height: 1.6;
+}
+
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 850px;
+
+    nav{
+        display: flex;
+        padding: 20px 0px 20px 0px;
+        align-self: self-start;
+    }
+
+}
+
+
+.blog-post{
+    
+    text-align: justify;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+
+    h1{
+        display: flex;
+        justify-content: center;
+        font-size: 4.5rem;
+    }
+
+    p{
+        font-size: large;
+    }
+}
+
+.alice-regular {
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lora-400 {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+

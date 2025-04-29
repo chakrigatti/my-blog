@@ -5,6 +5,18 @@
             "title": "My First Blog Post",
             "date": "2025-04-22",
             "tags": ["personal"]
+        },
+        {
+            "slug": "nav-table-content.html",
+            "title": "My Second Test Blog Post",
+            "date": "2025-04-22",
+            "tags": ["personal"]
+        },
+        {
+            "slug": "test3.html",
+            "title": "My Second Test Blog Post",
+            "date": "2025-04-22",
+            "tags": ["personal"]
         }
     ]
 }
