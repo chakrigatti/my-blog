@@ -1,0 +1,16 @@
+.page-wrapper{
+    display: grid;
+    grid-template-columns:1fr 40rem 1fr;
+}
+
+.intro{
+    grid-column: 2/3;
+}
+
+.main{
+    grid-column: 2/3;
+}
+
+.sidebar{
+    isolation: isolate;
+}

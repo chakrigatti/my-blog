@@ -1,0 +1,27 @@
+*{
+	box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.page-wrapper{
+	position: relative;
+}
+
+header{
+	background-image: url(https://csszengarden.com/214/contours.png), 
+	url(https://csszengarden.com/214/noise.png), 
+	url(https://csszengarden.com/214/gridlines.png), 
+	url(https://csszengarden.com/214/huntington.jpg);
+
+
+}
+
+header{
+	width: 100%;
+	height: 310px;
+	border-top: solid 12px rgba(19, 67, 71, 0.8);
+}
+

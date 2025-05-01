@@ -9,13 +9,19 @@
         {
             "slug": "nav-table-content.html",
             "title": "My Second Test Blog Post",
-            "date": "2025-04-22",
+            "date": "2025-04-28",
             "tags": ["personal"]
         },
         {
             "slug": "test3.html",
             "title": "My Second Test Blog Post",
-            "date": "2025-04-22",
+            "date": "2025-04-29",
+            "tags": ["personal"]
+        },
+        {
+            "slug": "zen-garden/css-zen-garden.html",
+            "title": "Zen garden testing css",
+            "date": "2025-04-30",
             "tags": ["personal"]
         }
     ]
