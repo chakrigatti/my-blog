@@ -7,16 +7,20 @@ body {
 :root{
     --primary-color: hsl(171, 63%, 46%);
     --primary-color-darker: hsl(170, 61%, 42%);
+    --section-heading-color : hsl(179, 41%, 25%);
 }
 
 h1,h5,p{
     margin: 0;
 }
 
+.hide{
+    display: none;
+}
+
 .resume-div{
     background-color: white;
     width: 210mm;
-    height: 297mm;
     margin-left: auto;
     margin-right: auto;
 }
@@ -81,4 +85,49 @@ header{
             border: 3px solid black;
         }
     }
+}
+
+.resume-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    /* grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "left right"
+        "left right"
+        "left right"; */
+
+    .resume-section{
+        padding:5px;
+
+        .section-heading{
+            .heading-name{
+                color: var(--section-heading-color);
+                border-bottom: 4px solid var(--section-heading-color);
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .experience{
+        /* grid-area: left; */
+    }
+
+    .skills{
+        /* grid-area: right; */
+    }
+
+    .education{
+        /* grid-area: left; */
+    }
+
+    .personal-projects{
+        /* grid-area: right; */
+    }
+
+    .achievements{
+        /* grid-area: left; */
+    }
+
+    
 }
