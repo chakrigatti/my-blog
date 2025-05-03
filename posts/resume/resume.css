@@ -1,7 +1,11 @@
 body {
-    box-sizing: border-box;
     background-color: black;
-    
+}
+html,*{
+    box-sizing: border-box;
+}
+*::after,*::before{
+    box-sizing: border-box;
 }
 
 :root{
@@ -91,13 +95,19 @@ header{
 
 .resume-content{
     display: grid;
-    grid-template-columns: 50% 1fr;
-    gap: 10px;
-    grid-template-areas:
-        "left right";
+    grid-template-columns: 105mm 105mm;
+    /* gap: 10px; */
+    
+    .left-area{
+        /* padding: 10px; */
+    }
+    .right-area{
+        /* padding: 10px; */
+    }
+    
 
     .resume-section{
-        padding:5px;
+        margin:25px;
 
         .section-heading{
             .heading-name{
@@ -114,8 +124,21 @@ header{
 
     .skills{
         .skills-list{
-            li{
-                list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            ul{
+                padding: 0px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                row-gap: 10px;
+                li{
+                    list-style: none;
+                    background: var(--primary-color);
+                    padding:5px 10px;
+                    border-radius: 5px;
+                    color: white;
+                }
             }
         }
     }
