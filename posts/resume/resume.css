@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    margin: 0px;
 }
 html,*{
     box-sizing: border-box;
@@ -26,6 +27,7 @@ h1,h5,p,ul{
 .resume-div{
     background-color: white;
     width: 210mm;
+    height: 297mm;
     margin-left: auto;
     margin-right: auto;
 }
@@ -177,7 +179,35 @@ header{
     }
 
     .education{
-        /* grid-area: left; */
+        .degree{
+            font-size: 18px;
+            font-weight: 700;
+            padding-bottom: 5px;
+        }
+
+        .university-name{
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .degree-details{
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            color: var(--section-heading-color);
+            font-size: 14px;
+        }
+    }
+
+    .hobbies{
+        ul{
+            padding:0px 0px 0px 15px;
+        }
+        li{
+            /* list-style: none; */
+            margin-bottom: 10px ;
+        }
     }
 
     .personal-projects{
