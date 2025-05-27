@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Blog Post</title>
+    <link rel="stylesheet" href="./second.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="blog-container lora-400">
+        <nav class="nav-bar">
+            <a href="../../index.html">Back</a>
+        </nav>
+
+        <nav class="contents">
+            <h2>Table of Contents</h4>
+            <a href="#auto-margins"> Centering with auto margin</a>
+            <a href="#flexbox"> Centering with Flexbox</a>
+            <a href="#positioned-layout"> Centering with Positioned Layout</a>
+            <a href="#grid"> Centering with CSS Grid</a>
+        </nav>
+
+        <main class="blog-post">
+            <h1 class="alice-regular">Center a DIV</h1>
+            <article>
+                <p>
+                    For a long time, centering an element within its parent was a surprisingly tricky thing to do. As CSS has evolved, we've been granted more and more tools we can use to solve this problem. These days, we're spoiled for choice!
+
+I decided to create this tutorial to help you understand the trade-offs between different approaches, and to give you an arsenal of strategies you can use, to handle centering in all sorts of scenarios.
+
+Honestly, this turned out to be way more interesting than I initially thought 😅. Even if you've been using CSS for a while, I bet you'll learn at least 1 new strategy!
+                </p>
+                <h3 id="auto-margins">Centering with auto margins</h3>
+                <p>The first strategy we'll look at is one of the oldest. If we want to center an element horizontally, we can do so using margins set to the special value auto:</p>
+                <p>First, we need to constrain the element's width; by default, elements in Flow layout will expand horizontally to fill the available space, and we can't really center something that is full-width.</p>
+                <p>When margin-left is the only side with auto margins, all of the extra space gets applied as margin to that side. When we set both margin-left: auto and margin-right: auto, the two hippos each gobble up an equal amount of space. This forces the element to the center.</p>
+                <h3 id="flexbox">Centering with Flexbox</h3>
+                <p>Flexbox is designed to give us a ton of control when it comes to distributing a group of items along a primary axis. It offers some really powerful tools for centering!</p>
+                <p>The really cool thing about Flexbox centering is that it works even when the children don’t fit in their container! Try shrinking the width/height, and notice that the element overflows symmetrically.</p>
+                <h3 id="positioned-layout">Centering with Positioned layout</h3>
+                <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
+
+Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
+
+With only these two properties, the element would stretch to fill the entire viewport, growing so that it's 0px from each edge. This can be useful in some contexts, but it's not what we're going for here. We need to constrain it.
+
+The exact values we pick will vary on the specifics of each situation, but in general we want to set default values (with width and height), as well as max values (max-width and max-height), so that the element doesn't overflow on smaller viewports.
+
+There's something interesting here: we've set up an impossible condition. Our element can't be 0px from the left and 0px from the right and only 12rem wide (assuming the viewport is wider than 12rem). We can only pick 2:
+                </p>
+            </article>
+        </main>
+    </div>
+
+</body>
+
+</html>
