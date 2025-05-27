@@ -19,11 +19,18 @@
         </nav>
 
         <nav class="contents">
-            <h2>Table of Contents</h4>
-            <a href="#auto-margins"> Centering with auto margin</a>
-            <a href="#flexbox"> Centering with Flexbox</a>
-            <a href="#positioned-layout"> Centering with Positioned Layout</a>
-            <a href="#grid"> Centering with CSS Grid</a>
+            <h2>TABLE OF CONTENTS</h4>
+            <a href="#auto-margins" class="main-heading"> Centering with auto margin</a>
+            <a href="#flexbox" class="main-heading"> Centering with Flexbox</a>
+            <a href="#positioned-layout" class="main-heading"> Centering with Positioned Layout</a>
+            <a href="#positioned-layout1" class="subheading"> Centering with Positioned Layout</a>
+            <a href="#positioned-layout2" class="subheading"> Centering with Positioned Layout</a>
+            <a href="#positioned-layout3" class="subheading"> Centering with Positioned Layout</a>
+            <a href="#positioned-layout4" class="subheading"> Centering with Positioned Layout</a>
+            <a href="#positioned-layout5" class="subheading"> Centering with Positioned Layout</a>
+            <a href="#grid" class="main-heading"> Centering with CSS Grid</a>
+            <a href="#positioned-layout6" class="subheading"> Centering with Positioned Layout</a>
+            <a href="#positioned-layout7" class="subheading"> Centering with Positioned Layout</a>
         </nav>
 
         <main class="blog-post">
@@ -44,6 +51,83 @@ Honestly, this turned out to be way more interesting than I initially thought ðŸ
                 <p>Flexbox is designed to give us a ton of control when it comes to distributing a group of items along a primary axis. It offers some really powerful tools for centering!</p>
                 <p>The really cool thing about Flexbox centering is that it works even when the children donâ€™t fit in their container! Try shrinking the width/height, and notice that the element overflows symmetrically.</p>
                 <h3 id="positioned-layout">Centering with Positioned layout</h3>
+                <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
+
+Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
+
+With only these two properties, the element would stretch to fill the entire viewport, growing so that it's 0px from each edge. This can be useful in some contexts, but it's not what we're going for here. We need to constrain it.
+
+The exact values we pick will vary on the specifics of each situation, but in general we want to set default values (with width and height), as well as max values (max-width and max-height), so that the element doesn't overflow on smaller viewports.
+
+There's something interesting here: we've set up an impossible condition. Our element can't be 0px from the left and 0px from the right and only 12rem wide (assuming the viewport is wider than 12rem). We can only pick 2:
+                </p>
+                <h3 id="positioned-layout1">Centering with Positioned layout</h3>
+                <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
+
+Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
+
+With only these two properties, the element would stretch to fill the entire viewport, growing so that it's 0px from each edge. This can be useful in some contexts, but it's not what we're going for here. We need to constrain it.
+
+The exact values we pick will vary on the specifics of each situation, but in general we want to set default values (with width and height), as well as max values (max-width and max-height), so that the element doesn't overflow on smaller viewports.
+
+There's something interesting here: we've set up an impossible condition. Our element can't be 0px from the left and 0px from the right and only 12rem wide (assuming the viewport is wider than 12rem). We can only pick 2:
+                </p>
+                <h3 id="positioned-layout2">Centering with Positioned layout</h3>
+                <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
+
+Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
+
+With only these two properties, the element would stretch to fill the entire viewport, growing so that it's 0px from each edge. This can be useful in some contexts, but it's not what we're going for here. We need to constrain it.
+
+The exact values we pick will vary on the specifics of each situation, but in general we want to set default values (with width and height), as well as max values (max-width and max-height), so that the element doesn't overflow on smaller viewports.
+
+There's something interesting here: we've set up an impossible condition. Our element can't be 0px from the left and 0px from the right and only 12rem wide (assuming the viewport is wider than 12rem). We can only pick 2:
+                </p>
+                <h3 id="positioned-layout3">Centering with Positioned layout</h3>
+                <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
+
+Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
+
+With only these two properties, the element would stretch to fill the entire viewport, growing so that it's 0px from each edge. This can be useful in some contexts, but it's not what we're going for here. We need to constrain it.
+
+The exact values we pick will vary on the specifics of each situation, but in general we want to set default values (with width and height), as well as max values (max-width and max-height), so that the element doesn't overflow on smaller viewports.
+
+There's something interesting here: we've set up an impossible condition. Our element can't be 0px from the left and 0px from the right and only 12rem wide (assuming the viewport is wider than 12rem). We can only pick 2:
+                </p>
+                <h3 id="positioned-layout4">Centering with Positioned layout</h3>
+                <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
+
+Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
+
+With only these two properties, the element would stretch to fill the entire viewport, growing so that it's 0px from each edge. This can be useful in some contexts, but it's not what we're going for here. We need to constrain it.
+
+The exact values we pick will vary on the specifics of each situation, but in general we want to set default values (with width and height), as well as max values (max-width and max-height), so that the element doesn't overflow on smaller viewports.
+
+There's something interesting here: we've set up an impossible condition. Our element can't be 0px from the left and 0px from the right and only 12rem wide (assuming the viewport is wider than 12rem). We can only pick 2:
+                </p>
+                <h3 id="positioned-layout5">Centering with Positioned layout</h3>
+                <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
+
+Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
+
+With only these two properties, the element would stretch to fill the entire viewport, growing so that it's 0px from each edge. This can be useful in some contexts, but it's not what we're going for here. We need to constrain it.
+
+The exact values we pick will vary on the specifics of each situation, but in general we want to set default values (with width and height), as well as max values (max-width and max-height), so that the element doesn't overflow on smaller viewports.
+
+There's something interesting here: we've set up an impossible condition. Our element can't be 0px from the left and 0px from the right and only 12rem wide (assuming the viewport is wider than 12rem). We can only pick 2:
+                </p>
+                <h3 id="positioned-layout6">Centering with Positioned layout</h3>
+                <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
+
+Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
+
+With only these two properties, the element would stretch to fill the entire viewport, growing so that it's 0px from each edge. This can be useful in some contexts, but it's not what we're going for here. We need to constrain it.
+
+The exact values we pick will vary on the specifics of each situation, but in general we want to set default values (with width and height), as well as max values (max-width and max-height), so that the element doesn't overflow on smaller viewports.
+
+There's something interesting here: we've set up an impossible condition. Our element can't be 0px from the left and 0px from the right and only 12rem wide (assuming the viewport is wider than 12rem). We can only pick 2:
+                </p>
+                <h3 id="positioned-layout7">Centering with Positioned layout</h3>
                 <p>In this example, we're using position: fixed, which anchors this element to the viewport. I like to think of the viewport like a pane of glass that sits in front of the website, like the window of a train that shows the landscape scrolling by. An element with position: fixed is like a ladybug that lands on the window.
 
 Next, we're setting inset: 0px, which is a shorthand that sets top, left, right, and bottom all to the same value, 0px.
