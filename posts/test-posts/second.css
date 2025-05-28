@@ -1,15 +1,13 @@
 body{
-    /* background-color: hsl(0, 15%, 95%); */
     line-height: 1.6;
-
 }
 
 .blog-container{
     display: grid;
-    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-columns: 2fr 5fr 2fr;
     grid-template-rows: 50px 1fr;
     grid-template-areas: 
-        "nav-bar nav-bar nav-bar"
+        "side-bar nav-bar nav-bar"
         "side-bar blog-post contents";
 
     .nav-bar{
@@ -48,8 +46,6 @@ body{
 
 .blog-post{
     
-    text-align: justify;
-    background-color: white;
     padding: 30px;
     border-radius: 20px;
 
@@ -83,6 +79,12 @@ body{
         display: block;
         text-decoration: none;
         color: gray;
+    }
+}
+
+@media (max-width: 66.5rem) {
+    .contents {
+        display: none;
     }
 }
 
