@@ -8,66 +8,70 @@
     <link rel="stylesheet" href="./second.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+
 </head>
 
 <body>
-    <div class="blog-container lora-400">
-        <nav class="nav-bar">
-            <a href="../../index.html">Back</a>
-        </nav>
+<div class="blog-container lora-400">
+<nav class="nav-bar">
+    <a href="../../index.html">Back</a>
+</nav>
 
-        <nav class="contents">
-            <h2>TABLE OF CONTENTS</h4>
-            <a href="#auto-margins" class="main-heading"> Centering with auto margin</a>
-            <a href="#positioned-layout" class="main-heading"> Centering with Positioned Layout</a>
-            <a href="#flexbox" class="main-heading"> Centering with Flexbox</a>
-            <a href="#grid" class="main-heading"> Centering with CSS Grid</a>
-        </nav>
+<nav class="contents">
+    <h2>TABLE OF CONTENTS</h4>
+    <a href="#auto-margins" class="main-heading"> Centering with auto margin</a>
+    <a href="#positioned-layout" class="main-heading"> Centering with Positioned Layout</a>
+    <a href="#flexbox" class="main-heading"> Centering with Flexbox</a>
+    <a href="#grid" class="main-heading"> Centering with CSS Grid</a>
+</nav>
 
-        <main class="blog-post">
-            <h1 class="alice-regular">Center a DIV</h1>
-            <article>
-                <p>
-                    Before learning css, every time I try to work with css this is the first thing I search in google. I will just copy the css code and it will work. I never bothered to see how it all works. After spending some time in learning the css basics, I want to write some notes related to centring a div.
-                </p>
-                <p>The current article applies to only when there is one child in the parent container. Also there should be some free space in the parent container, so we can arrange the child element in between in free space. That means at least weight or height should be predefined. </p>
+<main class="blog-post">
+    <h1 class="alice-regular">Center a DIV</h1>
+    <article>
+        <p>
+            Before learning css, every time I try to work with css this is the first thing I search in google. I will just copy the css code and it will work. I never bothered to see how it all works. After spending some time in learning the css basics, I want to write some notes related to centring a div.
+        </p>
+        <p>The current article applies to only when there is one child in the parent container. Also there should be some free space in the parent container, so we can arrange the child element in between in free space. That means at least weight or height should be predefined. </p>
 
-                <h3 id="auto-margins">Centering with auto margins</h3>
-                <p>If you set margin:auto to the child element, it will divide the free space in the parent container equally between margin-left and margin-right. We cannot center the child vertically.</p>
-                <h3 id="positioned-layout">Centering with Positioned layout</h3>
-                <p>When we set position:absolute , the element will taken out of the normal flow and positioned on the screen using top,left,bottom , right values. When the position : absolute is set it's position will placed relative to the first parent which has position set to other than the default value : static. If no such parent is there, then it will position relative to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts">viewport</a>. </p>
-                <p>So if we want to position the element in the center, we have to set top and left values such that it will be in the center of the container. </p>
-                <pre>
-                <code class="code-css">
-                .child{
-                    position:absolute;
-                    top:50%;
-                    left:50%;
-                }
-                </code>
-                </pre>
-                <p>This will make the child's top left corner to be placed in the  center of the screen. But this is not our end goal. This won't seem like center on the screen if the child has a big area.</p>
-                <p>To fix this we will move the element position left by half(50%) of the element's width and move up by half of its height.  Now it will be at the center of the screen.</p>
-                <pre>
-                <code class="code-css">
-                .child{
-                    position:absolute;
-                    top:50%;
-                    left:50%;
-                    transform: translate(-50%, -50%);
-                }
-                </code>
-                </pre>
-                <p>If we know the exact width and height of the element, we can just decrease half of height and width from top and left values. The translate is performing this operation automatically.</p>
-                <h3 id="flexbox">Centering with Flexbox</h3>
-                <p>We can easily center the elements using display:flex property. We can set horizontal and vertical alignment to be center. If we set justify-content to center, it will adjust the free space  to the ends equally in the main axis pushing the child container to the center. Similarly if we set align-items to center , it will adjust the free space of the opposite of main axis , pushing the container to  center in that axis.</p>
-                <h3 id="grid">Centering with grid</h3>
-                <p>We can just create a grid with one row and one column and then center in that using place-content : center. If there is one child , it will be placed in the center of the gird. </p>
-            </article>
-        </main>
-    </div>
+        <h3 id="auto-margins">Centering with auto margins</h3>
+        <p>If you set margin:auto to the child element, it will divide the free space in the parent container equally between margin-left and margin-right. We cannot center the child vertically.</p>
+        
+        <div id="code-exmp1"></div>
+        
+        <h3 id="positioned-layout">Centering with Positioned layout</h3>
+        <p>When we set position:absolute , the element will taken out of the normal flow and positioned on the screen using top,left,bottom , right values. When the position : absolute is set it's position will placed relative to the first parent which has position set to other than the default value : static. If no such parent is there, then it will position relative to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts">viewport</a>. </p>
+        <p>So if we want to position the element in the center, we have to set top and left values such that it will be in the center of the container. </p>
+        <pre>
+        <code class="code-css">
+        .child{
+            position:absolute;
+            top:50%;
+            left:50%;
+        }
+        </code>
+        </pre>
+        <p>This will make the child's top left corner to be placed in the  center of the screen. But this is not our end goal. This won't seem like center on the screen if the child has a big area.</p>
+        <p>To fix this we will move the element position left by half(50%) of the element's width and move up by half of its height.  Now it will be at the center of the screen.</p>
+        <pre>
+        <code class="code-css">
+        .child{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        </code>
+        </pre>
+        <p>If we know the exact width and height of the element, we can just decrease half of height and width from top and left values. The translate is performing this operation automatically.</p>
+        <h3 id="flexbox">Centering with Flexbox</h3>
+        <p>We can easily center the elements using display:flex property. We can set horizontal and vertical alignment to be center. If we set justify-content to center, it will adjust the free space  to the ends equally in the main axis pushing the child container to the center. Similarly if we set align-items to center , it will adjust the free space of the opposite of main axis , pushing the container to  center in that axis.</p>
+        <h3 id="grid">Centering with grid</h3>
+        <p>We can just create a grid with one row and one column and then center in that using place-content : center. If there is one child , it will be placed in the center of the gird. </p>
+    </article>
+</main>
+</div>
 
 </body>
 
