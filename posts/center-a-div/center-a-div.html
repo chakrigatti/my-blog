@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Center a DIV</title>
     <link rel="stylesheet" href="./second.css">
+    <link rel="stylesheet" href="../styles/utilities.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"  /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+
+    <script src="../../js/CenterDiv.js" type="module"></script>
 
 </head>
 
@@ -72,6 +80,23 @@
     </article>
 </main>
 </div>
+
+<template id="html-css-code-template">
+<div class="code-ground">
+    <div class="codeContainer">
+        <div class="selectCode">
+            <span class="htmlSelect">HTML</span>
+            <span class="cssSelect code-selected">CSS</span>
+        </div>
+        <div class="codePanels">
+            <div class="htmlPanel displayNone"></div>
+            <div class="cssPanel"></div>
+        </div>
+    </div>
+    <div class="codeOutput">
+    </div>
+</div>
+</template>
 
 </body>
 
