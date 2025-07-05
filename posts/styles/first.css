@@ -37,6 +37,28 @@ body{
     p{
         font-size: large;
     }
+
+    blockquote{
+        background-color: #f8f9fa;
+        border-left: 4px solid #dee2e6;
+        margin: 20px 0;
+        padding: 15px 20px;
+        font-style: italic;
+        color: #495057;
+        border-radius: 0 8px 8px 0;
+        
+        p{
+            margin: 10px 0;
+        }
+        
+        p:first-child{
+            margin-top: 0;
+        }
+        
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
 }
 
 .alice-regular {
