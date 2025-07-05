@@ -41,6 +41,12 @@ export class CSSCodeBlock extends FragmentContainer{
 
     }
 
+    setHTMLAndCSSCode(htmlCode: string, cssCode: string) {
+        this.setHTMLCode(htmlCode);
+        this.setCSSCode(cssCode);
+        this.setCodeOutput(`<style>${cssCode}</style>${htmlCode}`);
+    }
+
     public setHTMLCode(code: string) {
         // Use Prism.js to highlight HTML code and retain indentation
         const highlighted = (window as any).Prism
@@ -56,7 +62,13 @@ export class CSSCodeBlock extends FragmentContainer{
         this.cssPanel.innerHTML = `<pre class="language-css"><code>${highlighted}</code></pre>`;
     }
     public setCodeOutput(code: string) {
-        this.codeOutput.innerHTML = code;
+        const iframe = document.createElement('iframe');
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+        iframe.srcdoc = code;
+        this.codeOutput.innerHTML = '';
+        this.codeOutput.appendChild(iframe);
     }
 
 }

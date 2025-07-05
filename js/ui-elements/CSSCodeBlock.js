@@ -31,6 +31,11 @@ export class CSSCodeBlock extends FragmentContainer {
             htmlPanel.classList.add('displayNone');
         };
     }
+    setHTMLAndCSSCode(htmlCode, cssCode) {
+        this.setHTMLCode(htmlCode);
+        this.setCSSCode(cssCode);
+        this.setCodeOutput(`<style>${cssCode}</style>${htmlCode}`);
+    }
     setHTMLCode(code) {
         const highlighted = window.Prism
             ? window.Prism.highlight(code, window.Prism.languages.html, 'html')
@@ -44,6 +49,12 @@ export class CSSCodeBlock extends FragmentContainer {
         this.cssPanel.innerHTML = `<pre class="language-css"><code>${highlighted}</code></pre>`;
     }
     setCodeOutput(code) {
-        this.codeOutput.innerHTML = code;
+        const iframe = document.createElement('iframe');
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+        iframe.srcdoc = code;
+        this.codeOutput.innerHTML = '';
+        this.codeOutput.appendChild(iframe);
     }
 }
