@@ -1,6 +1,12 @@
 {
     "posts": [
         {
+            "slug": "perfect-square-date-1.html",
+            "title": "Perfect Square Date - Part 1",
+            "date": "13th July,2025",
+            "tags": ["personal"]
+        },
+        {
             "slug": "perfectionism.html",
             "title": "Perfectionism",
             "date": "5th July,2025",
